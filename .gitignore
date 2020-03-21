@@ -86,4 +86,9 @@ doc/api/
 
 # End of https://www.gitignore.io/api/dart
 
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+.vscode/
+
 
