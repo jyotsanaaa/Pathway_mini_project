@@ -43,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                
                 TextFormField(
                   decoration: InputDecoration(
                       labelText: 'Current Location',
@@ -52,16 +53,22 @@ class _MyHomePageState extends State<MyHomePage> {
                         borderSide: new BorderSide(),
                       )),
                 ),
+
+                SizedBox(height: 12,),  // Space of 12 px(logical) is created between "Current location" text filed and "Final Destination" button
         
                 TextFormField(
                   decoration: InputDecoration(
+                      
                       labelText: 'Final Destination',
                       fillColor: Colors.white,
                       border: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(20.0),
                         borderSide: new BorderSide(),
-                      )),
+                      )
+                    ),
                 ),
+
+                SizedBox(height: 12,), // Space of 12 px is created between "Final destination" text filed and "enter" button
 
                 MaterialButton(
                   onPressed: () => {},
