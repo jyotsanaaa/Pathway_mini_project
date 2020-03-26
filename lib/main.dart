@@ -43,7 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                
                 TextFormField(
                   decoration: InputDecoration(
                       labelText: 'Current Location',
@@ -52,34 +51,47 @@ class _MyHomePageState extends State<MyHomePage> {
                         borderRadius: new BorderRadius.circular(20.0),
                         borderSide: new BorderSide(),
                       )),
+                  keyboardType: TextInputType.text,
+                  autocorrect: false,
+                  textCapitalization: TextCapitalization.sentences,
                 ),
 
-                SizedBox(height: 12,),  // Space of 12 px(logical) is created between "Current location" text filed and "Final Destination" button
-        
+                SizedBox(
+                  height: 12,
+                ), // Space of 12 px(logical) is created between "Current location" text filed and "Final Destination" button
+
                 TextFormField(
                   decoration: InputDecoration(
-                      
                       labelText: 'Final Destination',
                       fillColor: Colors.white,
                       border: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(20.0),
                         borderSide: new BorderSide(),
-                      )
-                    ),
+                      )),
+                  keyboardType: TextInputType.text,
+                  autocorrect: false,
+                  textCapitalization: TextCapitalization.sentences,
                 ),
 
-                SizedBox(height: 12,), // Space of 12 px is created between "Final destination" text filed and "enter" button
+                SizedBox(
+                  height: 12,
+                ), // Space of 12 px is created between "Final destination" text filed and "enter" button
 
                 MaterialButton(
+                    child: new MaterialButton(
                   onPressed: () => {},
-                  textColor: Colors.white,
-                  height: 40.0,
-                  minWidth: 50.0,
-                  color: Theme.of(context).primaryColor,
-                  child: new Text('Enter'),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(22.0)),
+                  height: 35.0,
+                  minWidth: 100.0,
+                  elevation: 5.0,
+                  color: Color(0x6FC9E7),
+                  child: new Text('Enter',
+                      style:
+                          new TextStyle(fontSize: 16.0, color: Colors.white)),
                   splashColor: Colors.black,
-                ),
-                
+                )),
+
                 Container(
                   color: Colors.white,
                   padding: EdgeInsets.symmetric(vertical: 338.35),
