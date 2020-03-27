@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(HomePage());
-
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -47,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     decoration: InputDecoration(
                         labelText: 'Current Location',
                         fillColor: Colors.white,
-                          border: new OutlineInputBorder(
+                        border: new OutlineInputBorder(
                           borderRadius: new BorderRadius.circular(20.0),
                           borderSide: new BorderSide(),
                           )
@@ -58,7 +56,6 @@ class _MyHomePageState extends State<MyHomePage> {
         
                 TextFormField(
                   decoration: InputDecoration(
-                      
                       labelText: 'Final Destination',
                       fillColor: Colors.white,
                       border: new OutlineInputBorder(
