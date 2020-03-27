@@ -39,7 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Form(
             key: _formKey,
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                   TextFormField(
                     decoration: InputDecoration(
@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                     ),
 
-                SizedBox(width: 12,),  // Space of 12 px(logical) is created between "Current location" text filed and "Final Destination" button
+                SizedBox(height: 12,),  // Space of 12 px(logical) is created between "Current location" text filed and "Final Destination" button
         
                 TextFormField(
                   decoration: InputDecoration(
@@ -68,6 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(height: 12,), // Space of 12 px is created between "Final destination" text filed and "enter" button
 
                 MaterialButton(
+                
                   onPressed: () => {},
                   textColor: Colors.white,
                   height: 40.0,
@@ -75,41 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Theme.of(context).primaryColor,
                   child: new Text('Enter'),
                   splashColor: Colors.black,
-                ),
-                
-                // Displaying the data part
-                Container(
-                  color: Colors.white,
-                  padding: EdgeInsets.symmetric(vertical: 338.35),
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Table(
-                      //  columnWidths: {1: FractionColumnWidth(.2)},
-                      border: TableBorder.all(color: Colors.black45),
-                      children: [
-                        TableRow(children: [
-                          Text('Fare'),
-                          Text('Stops'),
-                          Text('Route'),
-                        ]),
-                        TableRow(children: [
-                          Text('1.'),
-                          Text('1.'),
-                          Text('1.'),
-                        ]),
-                        TableRow(children: [
-                          Text('2.'),
-                          Text('2.'),
-                          Text('2.'),
-                        ]),
-                        TableRow(children: [
-                          Text('3.'),
-                          Text('3.'),
-                          Text('3.'),
-                        ])
-                      ],
-                    ),
-                  ),
+                  
                 ),
               ],
             ),
@@ -120,21 +87,57 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-class _OutlineButton extends StatelessWidget {
-  final String buttonText;
-  final void Function() onTap;
+  // // Displaying the data part
+  //               Container(
+  //                 color: Colors.white,
+  //                 padding: EdgeInsets.symmetric(vertical: 338.35),
+  //                 child: Align(
+  //                   alignment: Alignment.bottomCenter,
+  //                   child: Table(
+  //                     //  columnWidths: {1: FractionColumnWidth(.2)},
+  //                     border: TableBorder.all(color: Colors.black45),
+  //                     children: [
+  //                       TableRow(children: [
+  //                         Text('Fare'),
+  //                         Text('Stops'),
+  //                         Text('Route'),
+  //                       ]),
+  //                       TableRow(children: [
+  //                         Text('1.'),
+  //                         Text('1.'),
+  //                         Text('1.'),
+  //                       ]),
+  //                       TableRow(children: [
+  //                         Text('2.'),
+  //                         Text('2.'),
+  //                         Text('2.'),
+  //                       ]),
+  //                       TableRow(children: [
+  //                         Text('3.'),
+  //                         Text('3.'),
+  //                         Text('3.'),
+  //                       ])
+  //                     ],
+  //                   ),
+  //                 ),
+  //               ),
 
-  _OutlineButton(this.buttonText, {this.onTap});
 
-  @override
-  Widget build(BuildContext context) {
-    return OutlineButton(
-      borderSide: BorderSide(
-        color: Colors.indigo,
-      ),
-      textColor: Colors.indigo,
-      onPressed: onTap,
-      child: Text(buttonText),
-    );
-  }
-}
+// class _OutlineButton extends StatelessWidget {
+//   final String buttonText;
+//   final void Function() onTap;
+
+//   _OutlineButton(this.buttonText, {this.onTap});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return OutlineButton(
+//       borderSide: BorderSide(
+//         color: Colors.indigo,
+//       ),
+//       textColor: Colors.indigo,
+//       onPressed: onTap,
+//       child: Text(buttonText),
+//     );
+//   }
+// }
