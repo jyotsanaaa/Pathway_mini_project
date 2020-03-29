@@ -1,14 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:login_project/screens/home.dart';
-// import 'package:login_project/screens/route.dart';
-import 'dart:io';
+import 'package:login_project/screens/home/home.dart';
 
-void main(){
-  FlutterError.onError = (FlutterErrorDetails details){
-    FlutterError.dumpErrorToConsole(details);
-    if (kReleaseMode)
-      exit(1);
-  };
- runApp(HomePage());
-}
+void main() => runApp(HomePage());
