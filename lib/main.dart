@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:login_project/screens/home/home.dart';
-// import 'package:login_project/screens/route.dart';
+//import 'package:login_project/screens/route/route.dart';
 import 'dart:io';
 
 void main(){
