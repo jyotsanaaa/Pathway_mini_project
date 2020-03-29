@@ -45,21 +45,23 @@ class _MyRoute extends State<MyRoute>{
                     return Card(
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
-                        child: Text(position.toString(), style: TextStyle(22.0),),                      )
-                    ),
+                        child: Text(position.toString(), style: TextStyle(),),                      )
+                    );
                   },
                 ),
                 
 
                 ListView.separated(
                   itemBuilder: (context, position){
-                    return ListItem();
+                    //return ListItem();
+                    return null;
                   }, 
                   separatorBuilder: (context, position)
                   {
-                    return SeparatorItem();
+                    //return SeparatorItem();
+                    return null;
                   }, 
-                  itemCount: itemCount,
+                  // itemCount: itemCount,
                 ),
               ],
             ),
