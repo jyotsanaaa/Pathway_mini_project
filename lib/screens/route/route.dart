@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Pathway',
-      theme: ThemeData(
-        inputDecorationTheme: InputDecorationTheme(
-          border: OutlineInputBorder(),
-        ),
-      ),
-      home: MyRoute(title: 'Pathway : A Local Route Finder'),
-    );
-  }
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     debugShowCheckedModeBanner: false,
+  //     title: 'Pathway',
+  //     theme: ThemeData(
+  //       inputDecorationTheme: InputDecorationTheme(
+  //         border: OutlineInputBorder(),
+  //       ),
+  //     ),
+  //     home: MyRoute(title: 'Pathway : A Local Route Finder'),
+  //   );
+  // }
 
 class MyRoute extends StatefulWidget {
   MyRoute({Key key, this.title}) : super(key: key);
