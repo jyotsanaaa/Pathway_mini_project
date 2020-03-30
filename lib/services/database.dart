@@ -16,5 +16,4 @@ class DatabaseService {
       'Destination': destination,
     });
   }
-
 }
