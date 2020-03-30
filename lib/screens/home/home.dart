@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_project/services/database.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -27,6 +29,17 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   GlobalKey<FormState> _formKey = GlobalKey();
 
+  final txtContoller1 = TextEditingController();
+  final txtContoller2 = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    txtContoller1.dispose();
+    txtContoller2.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,16 +54,18 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                        labelText: 'Current Location',
-                        fillColor: Colors.white,
-                        border: new OutlineInputBorder(
-                          borderRadius: new BorderRadius.circular(20.0),
-                          borderSide: new BorderSide(),
-                          )
-                        ),
+
+                TextFormField(
+                  decoration: InputDecoration(
+                      labelText: 'Current Location',
+                      fillColor: Colors.white,
+                      border: new OutlineInputBorder(
+                        borderRadius: new BorderRadius.circular(20.0),
+                        borderSide: new BorderSide(),
+                      )
                     ),
+                    controller: txtContoller1,
+                  ),
 
                 SizedBox(height: 12,),  // Space of 12 px(logical) is created between "Current location" text filed and "Final Destination" button
         
@@ -61,22 +76,21 @@ class _MyHomePageState extends State<MyHomePage> {
                       border: new OutlineInputBorder(
                         borderRadius: new BorderRadius.circular(20.0),
                         borderSide: new BorderSide(),
-                      )
-                    ),
+                    )
+                  ),
+                  controller: txtContoller2,
                 ),
 
                 SizedBox(height: 12,), // Space of 12 px is created between "Final destination" text filed and "enter" button
 
                 MaterialButton(
-                
-                  onPressed: () => {},
+                  onPressed: DatabaseService().updateUserData(txtContoller1.text, txtContoller2.text),
                   textColor: Colors.white,
                   height: 40.0,
                   minWidth: 50.0,
                   color: Theme.of(context).primaryColor,
                   child: new Text('Enter'),
                   splashColor: Colors.black,
-                  
                 ),
               ],
             ),
